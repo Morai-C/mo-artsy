@@ -15,7 +15,12 @@ const HeaderComp = () => {
     <header>
       <div className="container">
         <nav className="navbar">
-          <button className="d-lg-none" onClick={toggleHamburger}>
+          <button
+            className="d-lg-none"
+            onClick={() => {
+              setHamburgerOpen(true);
+            }}
+          >
             <i className="fa-solid fa-bars"></i>
           </button>
           <Link href="/">
@@ -40,15 +45,26 @@ const HeaderComp = () => {
         </nav>
       </div>
 
-      <nav className="mobile-nav d-flex flex-column justify-content-between bg-warning container">
+      <nav
+        className={`${
+          hamburgerOpen === true
+            ? "mobile-nav d-flex flex-column justify-content-between bg-warning container"
+            : "d-none"
+        }`}
+      >
         <div className="d-flex justify-content-between">
           <Link href="/">
             <a className="text-uppercase">artsy.</a>
           </Link>
 
-          <div>
-            <i className="fa-solid fs-5 fa-xmark" onClick={toggleHamburger}></i>
-          </div>
+          <button
+            className=""
+            onClick={() => {
+              setHamburgerOpen(false);
+            }}
+          >
+            <i className="fa-solid fs-5 fa-xmark"></i>
+          </button>
         </div>
 
         <ul className="nav flex-column bg-danger">
@@ -61,9 +77,9 @@ const HeaderComp = () => {
           ))}
         </ul>
 
-        <div className="text-end">
-          <div className="chat-icon-box">
-            <i className="fa-solid fa-2x fa-message"></i>
+        <div className="d-flex justify-content-end">
+          <div className="chat-icon-box d-flex justify-content-center align-items-center">
+            <i className="fa-solid text-light fa-2x fa-message"></i>
           </div>
         </div>
       </nav>
