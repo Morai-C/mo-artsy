@@ -1,0 +1,21 @@
+header {
+  position: relative;
+  .mobile-nav {
+    padding-top: 1.71rem;
+    padding-bottom: 1.71rem;
+    position: absolute;
+    top: 0;
+    min-height: 100vh;
+
+    ul {
+      min-height: 60vh;
+    }
+
+    .chat-icon-box {
+      width: 4.6rem;
+      height: 4.6rem;
+      border-radius: 50%;
+      background-color: purple;
+    }
+  }
+}
