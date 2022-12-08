@@ -1,7 +1,6 @@
 import AppLayout from "layouts/app.layout";
 import Head from "next/head";
 import Image from "next/image";
-import styles from "../styles/Home.module.css";
 
 export default function Home() {
   return (
@@ -13,7 +12,20 @@ export default function Home() {
       </Head>
 
       <AppLayout>
-        <h1>Welcome to the homepage</h1>
+        <div className="app-homepage">
+          <div className="intro-section">
+            <div className="container">
+              <h1 className="text-center">
+                Photography is poetry & <br /> beautiful untold stories
+              </h1>
+              <p className="text-center">
+                Flip through more than 10,000 vintage shots, old photograghs,
+                historic <br /> images and captures seamlessly in one place.
+                Register to get top access.
+              </p>
+            </div>
+          </div>
+        </div>
       </AppLayout>
 
       {/* <main className={styles.main}>

@@ -1,6 +1,37 @@
+@import "./variables";
+
 header {
   position: relative;
+  .logo {
+    font-size: 2rem;
+  }
+  .navbar {
+    ul {
+      font-weight: 500;
+      li > a {
+        color: $dark;
+        font-size: 1.3rem;
+      }
+      li > a.active {
+        //margin-bottom: 2px;
+        border-bottom: 2px solid $dark;
+      }
+    }
+    .nav-icons {
+      padding: 1rem 0;
+      //max-width: 7rem;
+      //width: 10%;
+      display: flex;
+      justify-content: space-between;
+      i {
+        font-size: 1.3rem;
+        padding: 0 0.5rem;
+      }
+    }
+  }
+
   .mobile-nav {
+    background-color: $light;
     padding-top: 1.71rem;
     padding-bottom: 1.71rem;
     position: absolute;
@@ -9,6 +40,9 @@ header {
 
     ul {
       min-height: 60vh;
+      li > a {
+        color: $dark;
+      }
     }
 
     .chat-icon-box {
